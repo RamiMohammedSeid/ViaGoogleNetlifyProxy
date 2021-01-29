@@ -15,10 +15,10 @@ const getGoogle = ( query ) => {
       'Upgrade-Insecure-Requests': '1',
       'lang': 'en-us'
     }
-  }).then(response => { return { statusCode: 200, body: response.text() } });
+  }).then(response => response.text()).then(response => { return { statusCode: 200, body: response  } });
 };
 
 exports.handler = async (event, context) => {
 
-  return getGoogle(event.queryStringParameters.query)
+  return getGoogle(event.queryStringParameters.query || "")
 };
