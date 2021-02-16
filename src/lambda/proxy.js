@@ -11,6 +11,7 @@ const getGoogle = ( query ) => {
       'Accept-Language': 'en-US,en;q=0.5',
       'Accept-Encoding': 'gzip, deflate',
       'Connection': 'keep-alive',
+      'DNS': '1',
       'Upgrade-Insecure-Requests': '1',
       'lang': 'en-us'
     }
